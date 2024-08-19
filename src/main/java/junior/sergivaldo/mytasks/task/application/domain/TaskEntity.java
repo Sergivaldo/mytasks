@@ -1,31 +1,26 @@
 package junior.sergivaldo.mytasks.task.application.domain;
 
-import lombok.*;
+import lombok.Builder;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.ZonedDateTime;
-import java.util.Objects;
 import java.util.UUID;
 
-@Getter
+@Data
 public class TaskEntity {
     private final UUID id;
     private String title;
-    @Setter
     private String description;
     private final ZonedDateTime createdAt;
-    @Setter
     private ZonedDateTime lastUpdatedAt;
 
     @Builder()
     public TaskEntity(String title, String description) {
         this.id = UUID.randomUUID();
+        this.title = title;
         this.description = description;
         this.createdAt = ZonedDateTime.now();
-        setTitle(title);
     }
-
-    public void setTitle(String title) {
-        this.title = Objects.requireNonNull(title);
-    }
-
 }
