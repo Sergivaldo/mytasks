@@ -1,7 +1,7 @@
 package junior.sergivaldo.mytasks.task.application.usecases;
 
-import org.springframework.scheduling.config.Task;
+import junior.sergivaldo.mytasks.task.application.domain.TaskEntity;
 
 public interface TaskCreateAdapter {
-    Task create(Task task);
+    TaskEntity create(TaskEntity task);
 }
