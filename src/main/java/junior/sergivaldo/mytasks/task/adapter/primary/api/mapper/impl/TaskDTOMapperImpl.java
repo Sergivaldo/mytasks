@@ -5,18 +5,25 @@ import junior.sergivaldo.mytasks.task.adapter.primary.api.mapper.TaskDTOMapper;
 import junior.sergivaldo.mytasks.task.application.domain.TaskEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class TaskDTOMapperImpl implements TaskDTOMapper {
 
     @Override
     public TaskEntity mapToEntity(TaskDTO task) {
         return TaskEntity.builder()
-                .id(task.getId())
-                .title(task.getTitle())
+                .title(task.getTitle().toLowerCase())
                 .description(task.getDescription())
-                .createdAt(task.getCreatedAt())
-                .lastUpdatedAt(task.getLastUpdatedAt())
                 .build();
+    }
+
+    @Override
+    public List<TaskDTO> mapToDTO(List<TaskEntity> taskEntities) {
+        return taskEntities
+                .stream()
+                .map(this::mapToDTO)
+                .toList();
     }
 
 

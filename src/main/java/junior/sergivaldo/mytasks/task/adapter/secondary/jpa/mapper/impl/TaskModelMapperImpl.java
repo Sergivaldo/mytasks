@@ -5,6 +5,8 @@ import junior.sergivaldo.mytasks.task.adapter.secondary.jpa.model.TaskModel;
 import junior.sergivaldo.mytasks.task.application.domain.TaskEntity;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class TaskModelMapperImpl implements TaskModelMapper {
 
@@ -28,5 +30,13 @@ public class TaskModelMapperImpl implements TaskModelMapper {
                 .createdAt(task.getCreatedAt())
                 .lastUpdatedAt(task.getLastUpdatedAt())
                 .build();
+    }
+
+    @Override
+    public List<TaskEntity> toEntity(List<TaskModel> tasks) {
+        return tasks
+                .stream()
+                .map(this::toEntity)
+                .toList();
     }
 }
