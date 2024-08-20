@@ -1,5 +1,6 @@
-package junior.sergivaldo.mytasks.task.application.domain;
+package junior.sergivaldo.mytasks.tasklist.application.domain;
 
+import junior.sergivaldo.mytasks.task.application.domain.TaskEntity;
 import lombok.Builder;
 import lombok.Data;
 
