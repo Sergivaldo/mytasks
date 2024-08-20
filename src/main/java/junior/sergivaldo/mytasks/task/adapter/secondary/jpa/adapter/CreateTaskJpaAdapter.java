@@ -1,4 +1,4 @@
-package junior.sergivaldo.mytasks.task.adapter.secondary.jpa;
+package junior.sergivaldo.mytasks.task.adapter.secondary.jpa.adapter;
 
 import junior.sergivaldo.mytasks.task.adapter.secondary.jpa.mapper.TaskModelMapper;
 import junior.sergivaldo.mytasks.task.adapter.secondary.jpa.repository.TaskRepository;
