@@ -1,4 +1,4 @@
-package junior.sergivaldo.mytasks.adapter.primary.api.config.usecase;
+package junior.sergivaldo.mytasks.adapter.primary.api.config.usecase.task;
 
 import junior.sergivaldo.mytasks.application.port.in.CreateTaskUseCase;
 import junior.sergivaldo.mytasks.application.port.out.CreateTaskAdapter;

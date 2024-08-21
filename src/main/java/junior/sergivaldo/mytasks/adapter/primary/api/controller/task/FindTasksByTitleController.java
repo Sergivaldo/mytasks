@@ -1,4 +1,4 @@
-package junior.sergivaldo.mytasks.adapter.primary.api.controller;
+package junior.sergivaldo.mytasks.adapter.primary.api.controller.task;
 
 import junior.sergivaldo.mytasks.commons.adapter.primary.api.Routes;
 import junior.sergivaldo.mytasks.adapter.primary.api.dto.TaskDTO;

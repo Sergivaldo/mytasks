@@ -9,7 +9,9 @@ import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
@@ -26,11 +28,16 @@ public class TaskListModelMapperImpl implements TaskListModelMapper {
 
     @Override
     public TaskListEntity mapToEntity(TaskListModel taskList) {
-        List<TaskEntity> tasks = taskList
-                .getTasks()
-                .stream()
-                .map(taskModelMapper::toEntity)
-                .toList();
+        List<TaskEntity> tasks = Optional
+                .ofNullable(taskList.getTasks())
+                .map(
+                       taskModels -> taskModels
+                               .stream()
+                               .map(taskModelMapper::toEntity)
+                               .toList()
+                )
+                .orElse(Collections.emptyList());
+
 
         return TaskListEntity.builder()
                 .id(taskList.getId())

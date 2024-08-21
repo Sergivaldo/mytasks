@@ -17,6 +17,10 @@ public class CreateTaskListJpaAdapter implements CreateTaskListAdapter {
 
     @Override
     public TaskListEntity create(TaskListEntity taskListEntity) {
-        return taskListModelMapper.mapToEntity(taskListModelMapper.mapToModel(taskListEntity));
+        return taskListModelMapper.mapToEntity(
+                taskListRepository.save(
+                        taskListModelMapper.mapToModel(taskListEntity)
+                )
+        );
     }
 }
