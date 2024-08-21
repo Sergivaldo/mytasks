@@ -33,6 +33,7 @@ public class TaskDTOMapperImpl implements TaskDTOMapper {
                 .id(task.getId())
                 .title(task.getTitle())
                 .description(task.getDescription())
+                .listName(task.getTaskList().getName())
                 .createdAt(task.getCreatedAt())
                 .lastUpdatedAt(task.getUpdatedAt())
                 .build();
