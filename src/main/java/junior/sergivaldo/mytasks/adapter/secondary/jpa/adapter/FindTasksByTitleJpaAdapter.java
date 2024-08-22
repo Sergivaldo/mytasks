@@ -19,7 +19,7 @@ public class FindTasksByTitleJpaAdapter implements FindTasksByTitleAdapter {
     @Override
     public List<TaskEntity> find(String title) {
         return taskModelMapper.toEntity(
-                        taskRepository.findByTitleContaining(title)
-                );
+                taskRepository.findByTitleContaining(title)
+        );
     }
 }
