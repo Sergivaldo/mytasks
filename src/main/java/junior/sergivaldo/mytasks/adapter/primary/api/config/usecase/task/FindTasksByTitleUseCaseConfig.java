@@ -10,10 +10,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 public class FindTasksByTitleUseCaseConfig {
-    private final FindTasksByTitleAdapter  findTasksByTitleAdapter;
 
     @Bean
-    public FindTasksByTitleUseCase findTasksByTitleUseCase() {
+    public FindTasksByTitleUseCase findTasksByTitleUseCase(FindTasksByTitleAdapter  findTasksByTitleAdapter) {
         return new FindTasksByTitleUseCaseImpl(findTasksByTitleAdapter);
     }
 }

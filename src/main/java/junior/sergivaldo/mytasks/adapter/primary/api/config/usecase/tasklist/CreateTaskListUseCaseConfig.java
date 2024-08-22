@@ -10,11 +10,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 public class CreateTaskListUseCaseConfig {
-
-    private final CreateTaskListAdapter createTaskListAdapter;
-
     @Bean
-    public CreateTaskListUseCase createTaskListUseCase() {
+    public CreateTaskListUseCase createTaskListUseCase(CreateTaskListAdapter createTaskListAdapter) {
         return new CreateTaskListUseCaseImpl(createTaskListAdapter);
     }
 }

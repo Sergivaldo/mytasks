@@ -10,10 +10,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @RequiredArgsConstructor
 public class CreateTaskUseCaseConfig {
-    private final CreateTaskAdapter createTaskAdapter;
 
     @Bean
-    public CreateTaskUseCase createTaskUseCaseImpl() {
+    public CreateTaskUseCase createTaskUseCaseImpl(CreateTaskAdapter createTaskAdapter) {
         return new CreateTaskUseCaseImpl(createTaskAdapter);
     }
 }
