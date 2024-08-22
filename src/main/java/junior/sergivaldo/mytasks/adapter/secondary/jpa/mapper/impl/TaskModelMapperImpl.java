@@ -1,20 +1,26 @@
 package junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.impl;
 
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.TaskModelMapper;
+import junior.sergivaldo.mytasks.adapter.secondary.jpa.model.TaskListModel;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.model.TaskModel;
 import junior.sergivaldo.mytasks.application.domain.TaskEntity;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-
 import java.util.List;
 
 @Component
+@RequiredArgsConstructor
 public class TaskModelMapperImpl implements TaskModelMapper {
 
     @Override
     public TaskModel toModel(TaskEntity task) {
+        TaskListModel taskListModel = new TaskListModel();
+        taskListModel.setId(task.getTaskListId());
+
         return TaskModel.builder()
                 .id(task.getId())
                 .title(task.getTitle())
+                .taskList(taskListModel)
                 .description(task.getDescription())
                 .createdAt(task.getCreatedAt())
                 .updatedAt(task.getUpdatedAt())
@@ -26,6 +32,7 @@ public class TaskModelMapperImpl implements TaskModelMapper {
         return TaskEntity.builder()
                 .id(task.getId())
                 .title(task.getTitle())
+                .taskListId(task.getTaskList().getId())
                 .description(task.getDescription())
                 .createdAt(task.getCreatedAt())
                 .updatedAt(task.getUpdatedAt())
