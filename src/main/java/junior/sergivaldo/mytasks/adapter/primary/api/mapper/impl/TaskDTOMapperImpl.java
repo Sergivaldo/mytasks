@@ -11,16 +11,17 @@ import java.util.List;
 public class TaskDTOMapperImpl implements TaskDTOMapper {
 
     @Override
-    public TaskEntity mapToEntity(TaskDTO task) {
+    public TaskEntity mapToEntity(TaskDTO dto) {
         return TaskEntity.builder()
-                .title(task.getTitle().toLowerCase())
-                .description(task.getDescription())
+                .title(dto.getTitle().toLowerCase())
+                .taskListId(dto.getTaskListId())
+                .description(dto.getDescription())
                 .build();
     }
 
     @Override
-    public List<TaskDTO> mapToDTO(List<TaskEntity> taskEntities) {
-        return taskEntities
+    public List<TaskDTO> mapToDTO(List<TaskEntity> entities) {
+        return entities
                 .stream()
                 .map(this::mapToDTO)
                 .toList();
@@ -29,11 +30,12 @@ public class TaskDTOMapperImpl implements TaskDTOMapper {
 
     @Override
     public TaskDTO mapToDTO(TaskEntity task) {
+
         return TaskDTO.builder()
                 .id(task.getId())
                 .title(task.getTitle())
                 .description(task.getDescription())
-                .listName(task.getTaskList().getName())
+                .taskListId(task.getTaskListId())
                 .createdAt(task.getCreatedAt())
                 .lastUpdatedAt(task.getUpdatedAt())
                 .build();
