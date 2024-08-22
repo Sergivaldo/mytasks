@@ -12,7 +12,7 @@ public class TaskEntity {
     private final UUID id;
     private String title;
     private String description;
-    private TaskListEntity taskList;
+    private UUID taskListId;
     private final LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 }

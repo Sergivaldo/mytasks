@@ -31,8 +31,8 @@ public class TaskModel {
     @Column(columnDefinition = "text")
     private String description;
 
-    @JoinColumn( name="task_list_id",referencedColumnName = "id", nullable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="task_list_id",referencedColumnName = "id", nullable = false)
+    @ManyToOne
     private TaskListModel taskList;
 
     @Column(name = "created_at", nullable = false, updatable = false )

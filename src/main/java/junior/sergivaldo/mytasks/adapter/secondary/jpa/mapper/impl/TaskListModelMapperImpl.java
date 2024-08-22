@@ -22,6 +22,7 @@ public class TaskListModelMapperImpl implements TaskListModelMapper {
     @Override
     public TaskListModel mapToModel(TaskListEntity taskListEntity) {
         return TaskListModel.builder()
+                .id(taskListEntity.getId())
                 .name(taskListEntity.getName())
                 .build();
     }
