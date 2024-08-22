@@ -21,7 +21,7 @@ public class TaskDTO {
 
     private String title;
 
-    private String listName;
+    private UUID taskListId;
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String description;
