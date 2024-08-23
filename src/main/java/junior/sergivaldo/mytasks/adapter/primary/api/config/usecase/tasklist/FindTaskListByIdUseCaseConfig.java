@@ -1,7 +1,7 @@
 package junior.sergivaldo.mytasks.adapter.primary.api.config.usecase.tasklist;
 
-import junior.sergivaldo.mytasks.application.port.in.FindTaskListByIdUseCase;
-import junior.sergivaldo.mytasks.application.port.out.FindTaskListByIdAdapter;
+import junior.sergivaldo.mytasks.application.port.in.tasklist.FindTaskListByIdUseCase;
+import junior.sergivaldo.mytasks.application.port.out.tasklist.FindTaskListByIdAdapter;
 import junior.sergivaldo.mytasks.application.usecases.tasklist.FindTaskListByIdUseCaseImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

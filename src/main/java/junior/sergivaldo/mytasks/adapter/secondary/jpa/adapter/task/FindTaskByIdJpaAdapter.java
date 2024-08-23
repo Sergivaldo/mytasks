@@ -1,9 +1,9 @@
-package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter;
+package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter.task;
 
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.TaskModelMapper;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.repository.TaskRepository;
 import junior.sergivaldo.mytasks.application.domain.TaskEntity;
-import junior.sergivaldo.mytasks.application.port.out.FindTaskByIdAdapter;
+import junior.sergivaldo.mytasks.application.port.out.task.FindTaskByIdAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

@@ -2,7 +2,7 @@ package junior.sergivaldo.mytasks.adapter.primary.api.controller.tasklist;
 
 import junior.sergivaldo.mytasks.adapter.primary.api.dto.TaskListDTO;
 import junior.sergivaldo.mytasks.adapter.primary.api.mapper.TaskListDTOMapper;
-import junior.sergivaldo.mytasks.application.port.in.FindAllTaskListUseCase;
+import junior.sergivaldo.mytasks.application.port.in.tasklist.FindAllTaskListUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

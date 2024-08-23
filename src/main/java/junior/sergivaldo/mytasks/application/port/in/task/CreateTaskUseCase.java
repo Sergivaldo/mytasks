@@ -1,4 +1,4 @@
-package junior.sergivaldo.mytasks.application.port.in;
+package junior.sergivaldo.mytasks.application.port.in.task;
 
 
 import junior.sergivaldo.mytasks.application.domain.TaskEntity;

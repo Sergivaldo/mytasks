@@ -2,12 +2,9 @@ package junior.sergivaldo.mytasks.adapter.primary.api.controller.task;
 
 import junior.sergivaldo.mytasks.adapter.primary.api.dto.TaskDTO;
 import junior.sergivaldo.mytasks.adapter.primary.api.mapper.TaskDTOMapper;
-import junior.sergivaldo.mytasks.application.port.in.FindTaskByIdUseCase;
+import junior.sergivaldo.mytasks.application.port.in.task.FindTaskByIdUseCase;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
@@ -20,8 +17,8 @@ public class FindTaskByIdController {
     private final FindTaskByIdUseCase findTaskByIdUseCase;
     private final TaskDTOMapper taskDTOMapper;
 
-    @GetMapping
-    public TaskDTO findTaskById(@RequestParam UUID id) {
+    @GetMapping("/{id}")
+    public TaskDTO findTaskById(@PathVariable UUID id) {
         return taskDTOMapper
                 .mapToDTO(
                     findTaskByIdUseCase.execute(id)
