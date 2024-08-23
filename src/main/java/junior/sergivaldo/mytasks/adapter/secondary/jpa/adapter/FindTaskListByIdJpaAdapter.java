@@ -18,11 +18,9 @@ public class FindTaskListByIdJpaAdapter implements FindTaskListByIdAdapter {
 
     @Override
     public TaskListEntity find(UUID id) {
-        return taskListModelMapper
-                .mapToEntity(
-                        taskListRepository
-                                .findById(id)
-                                .orElse(null)
-                );
+        return taskListRepository
+                .findById(id)
+                .map(taskListModelMapper::mapToEntity)
+                .orElse(null);
     }
 }
