@@ -1,9 +1,9 @@
-package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter;
+package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter.tasklist;
 
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.TaskListModelMapper;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.repository.TaskListRepository;
 import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
-import junior.sergivaldo.mytasks.application.port.out.CreateTaskListAdapter;
+import junior.sergivaldo.mytasks.application.port.out.tasklist.CreateTaskListAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

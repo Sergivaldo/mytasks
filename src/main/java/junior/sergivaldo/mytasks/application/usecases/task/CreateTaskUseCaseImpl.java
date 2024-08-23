@@ -2,9 +2,9 @@ package junior.sergivaldo.mytasks.application.usecases.task;
 
 import junior.sergivaldo.mytasks.application.domain.TaskEntity;
 import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
-import junior.sergivaldo.mytasks.application.port.in.CreateTaskUseCase;
-import junior.sergivaldo.mytasks.application.port.in.FindTaskListByIdUseCase;
-import junior.sergivaldo.mytasks.application.port.out.CreateTaskAdapter;
+import junior.sergivaldo.mytasks.application.port.in.task.CreateTaskUseCase;
+import junior.sergivaldo.mytasks.application.port.in.tasklist.FindTaskListByIdUseCase;
+import junior.sergivaldo.mytasks.application.port.out.task.CreateTaskAdapter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

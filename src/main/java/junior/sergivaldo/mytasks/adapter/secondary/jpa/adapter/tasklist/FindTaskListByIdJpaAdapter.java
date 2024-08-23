@@ -1,9 +1,9 @@
-package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter;
+package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter.tasklist;
 
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.TaskListModelMapper;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.repository.TaskListRepository;
 import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
-import junior.sergivaldo.mytasks.application.port.out.FindTaskListByIdAdapter;
+import junior.sergivaldo.mytasks.application.port.out.tasklist.FindTaskListByIdAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -18,11 +18,9 @@ public class FindTaskListByIdJpaAdapter implements FindTaskListByIdAdapter {
 
     @Override
     public TaskListEntity find(UUID id) {
-        return taskListModelMapper
-                .mapToEntity(
-                        taskListRepository
-                                .findById(id)
-                                .orElse(null)
-                );
+        return taskListRepository
+                .findById(id)
+                .map(taskListModelMapper::mapToEntity)
+                .orElse(null);
     }
 }

@@ -1,8 +1,8 @@
 package junior.sergivaldo.mytasks.application.usecases.tasklist;
 
 import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
-import junior.sergivaldo.mytasks.application.port.in.CreateTaskListUseCase;
-import junior.sergivaldo.mytasks.application.port.out.CreateTaskListAdapter;
+import junior.sergivaldo.mytasks.application.port.in.tasklist.CreateTaskListUseCase;
+import junior.sergivaldo.mytasks.application.port.out.tasklist.CreateTaskListAdapter;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

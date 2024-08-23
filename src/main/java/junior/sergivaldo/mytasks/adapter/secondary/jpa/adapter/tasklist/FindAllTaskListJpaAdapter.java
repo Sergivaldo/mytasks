@@ -1,9 +1,9 @@
-package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter;
+package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter.tasklist;
 
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.TaskListModelMapper;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.repository.TaskListRepository;
 import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
-import junior.sergivaldo.mytasks.application.usecases.tasklist.FindAllTaskListAdapter;
+import junior.sergivaldo.mytasks.application.port.out.tasklist.FindAllTaskListAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;

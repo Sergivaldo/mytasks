@@ -1,8 +1,8 @@
 package junior.sergivaldo.mytasks.application.usecases.task;
 
 import junior.sergivaldo.mytasks.application.domain.TaskEntity;
-import junior.sergivaldo.mytasks.application.port.in.FindTasksByTitleUseCase;
-import junior.sergivaldo.mytasks.application.port.out.FindTasksByTitleAdapter;
+import junior.sergivaldo.mytasks.application.port.in.task.FindTasksByTitleUseCase;
+import junior.sergivaldo.mytasks.application.port.out.task.FindTasksByTitleAdapter;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;
