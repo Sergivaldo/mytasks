@@ -1,4 +1,4 @@
-package junior.sergivaldo.mytasks.application.usecases;
+package junior.sergivaldo.mytasks.application.usecases.task;
 
 import junior.sergivaldo.mytasks.application.domain.TaskEntity;
 import junior.sergivaldo.mytasks.application.port.in.FindTasksByTitleUseCase;
