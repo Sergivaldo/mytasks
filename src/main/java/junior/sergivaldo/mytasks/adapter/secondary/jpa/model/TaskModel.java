@@ -31,6 +31,9 @@ public class TaskModel {
     @Column(columnDefinition = "text")
     private String description;
 
+    @Column(nullable = false)
+    private Integer position;
+
     @JoinColumn(name="task_list_id",referencedColumnName = "id", nullable = false)
     @ManyToOne
     private TaskListModel taskList;

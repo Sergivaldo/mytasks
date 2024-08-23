@@ -23,6 +23,8 @@ public class TaskDTO {
 
     private UUID taskListId;
 
+    private Integer position;
+
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private String description;
 
