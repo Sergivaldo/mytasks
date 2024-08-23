@@ -48,4 +48,12 @@ public class TaskListModelMapperImpl implements TaskListModelMapper {
                 .updatedAt(taskList.getUpdatedAt())
                 .build();
     }
+
+    @Override
+    public List<TaskListEntity> mapToEntity(List<TaskListModel> taskModelList) {
+        return taskModelList
+                .stream()
+                .map(this::mapToEntity)
+                .toList();
+    }
 }

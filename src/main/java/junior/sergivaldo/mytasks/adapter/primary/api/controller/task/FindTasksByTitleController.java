@@ -20,7 +20,7 @@ public class FindTasksByTitleController {
     private final TaskDTOMapper taskDTOMapper;
 
     @GetMapping
-    public List<TaskDTO> findTasksByTitle(@RequestParam String title) {
+    public List<TaskDTO> findTasksByTitle(@RequestParam(required = false) String title) {
         return taskDTOMapper.mapToDTO(
                 findTasksByTitleUseCase.execute(title)
         );
