@@ -12,6 +12,7 @@ import java.util.UUID;
 public class TaskListEntity {
     private UUID id;
     private String name;
+    private UUID boardId;
     private List<TaskEntity> tasks;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
