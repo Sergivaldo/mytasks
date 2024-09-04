@@ -8,4 +8,6 @@ import java.util.UUID;
 
 @Repository
 public interface TaskListRepository extends JpaRepository<TaskListModel, UUID> {
+
+    boolean existsByName(String name);
 }
