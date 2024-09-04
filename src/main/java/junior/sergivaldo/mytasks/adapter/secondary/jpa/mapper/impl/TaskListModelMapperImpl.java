@@ -24,6 +24,7 @@ public class TaskListModelMapperImpl implements TaskListModelMapper {
         return TaskListModel.builder()
                 .id(taskListEntity.getId())
                 .name(taskListEntity.getName())
+                .lastPosition(taskListEntity.getLastPosition())
                 .build();
     }
 
@@ -44,6 +45,7 @@ public class TaskListModelMapperImpl implements TaskListModelMapper {
                 .id(taskList.getId())
                 .name(taskList.getName())
                 .tasks(tasks)
+                .lastPosition(taskList.getLastPosition())
                 .createdAt(taskList.getCreatedAt())
                 .updatedAt(taskList.getUpdatedAt())
                 .build();

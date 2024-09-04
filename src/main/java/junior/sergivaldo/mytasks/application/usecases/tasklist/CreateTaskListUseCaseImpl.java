@@ -8,11 +8,12 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class CreateTaskListUseCaseImpl
 implements CreateTaskListUseCase {
-
     private final CreateTaskListAdapter createTaskListAdapter;
+    private static final Integer INITIAL_LAST_POSITION_VALUE = 0;
 
     @Override
     public TaskListEntity execute(TaskListEntity taskList) {
+        taskList.setLastPosition(INITIAL_LAST_POSITION_VALUE);
         return createTaskListAdapter.create(taskList);
     }
 }

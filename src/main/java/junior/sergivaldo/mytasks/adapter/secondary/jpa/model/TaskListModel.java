@@ -29,6 +29,9 @@ public class TaskListModel {
     @Column(nullable = false, unique = true)
     private String name;
 
+    @Column(name = "last_position", nullable = false)
+    private Integer lastPosition;
+
     @OneToMany(mappedBy = "taskList")
     private List<TaskModel> tasks;
 

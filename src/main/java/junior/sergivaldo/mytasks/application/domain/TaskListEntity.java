@@ -14,6 +14,14 @@ public class TaskListEntity {
     private String name;
     private UUID boardId;
     private List<TaskEntity> tasks;
+    private Integer lastPosition;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    public TaskListEntity update(TaskListEntity taskListEntity) {
+        this.name = taskListEntity.getName();
+        this.lastPosition = taskListEntity.getLastPosition();
+
+        return this;
+    }
 }
