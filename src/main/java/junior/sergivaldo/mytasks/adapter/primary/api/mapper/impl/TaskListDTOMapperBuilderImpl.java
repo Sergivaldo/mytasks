@@ -20,6 +20,7 @@ public class TaskListDTOMapperBuilderImpl implements TaskListDTOMapper {
         return TaskListDTO.builder()
                 .id(taskListEntity.getId())
                 .name(taskListEntity.getName())
+                .boardId(taskListEntity.getBoardId())
                 .tasks(taskDTOMapper.mapToDTO(taskListEntity.getTasks()))
                 .createdAt(taskListEntity.getCreatedAt())
                 .updatedAt(taskListEntity.getUpdatedAt())
@@ -29,6 +30,8 @@ public class TaskListDTOMapperBuilderImpl implements TaskListDTOMapper {
     @Override
     public TaskListEntity mapToEntity(TaskListDTO taskListDTO) {
         return TaskListEntity.builder()
+                .id(taskListDTO.getId())
+                .boardId(taskListDTO.getBoardId())
                 .name(taskListDTO.getName())
                 .build();
     }

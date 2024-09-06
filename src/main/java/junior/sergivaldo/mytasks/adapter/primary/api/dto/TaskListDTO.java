@@ -21,6 +21,8 @@ public class TaskListDTO {
 
     private String name;
 
+    private UUID boardId;
+
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private List<TaskDTO> tasks;
 
