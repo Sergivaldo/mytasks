@@ -13,7 +13,7 @@ public class BoardModelMapperBuilderImpl implements BoardModelMapper {
                 .id(board.getId())
                 .name(board.getName())
                 .description(board.getDescription())
-                .createAt(board.getCreatedAt())
+                .createdAt(board.getCreatedAt())
                 .updatedAt(board.getUpdatedAt())
                 .build();
     }
@@ -24,7 +24,7 @@ public class BoardModelMapperBuilderImpl implements BoardModelMapper {
                 .id(board.getId())
                 .name(board.getName())
                 .description(board.getDescription())
-                .createdAt(board.getCreateAt())
+                .createdAt(board.getCreatedAt())
                 .updatedAt(board.getUpdatedAt())
                 .build();
     }
