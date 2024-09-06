@@ -9,41 +9,36 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
 @Data
+@Table(name = "tb_board")
 @Entity
-@Table(name = "tb_task_list")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EntityListeners(AuditingEntityListener.class)
-public class TaskListModel {
+public class BoardModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+    private  UUID id;
 
     @Column(nullable = false, unique = true)
     private String name;
 
-    @Column(name = "last_position", nullable = false)
-    private Integer lastPosition;
+    @Column
+    private String description;
 
-    @ManyToOne
-    @JoinColumn(name = "board_id", referencedColumnName = "id", nullable = false)
-    private BoardModel board;
+    @OneToMany(mappedBy = "board", fetch = FetchType.LAZY)
+    private List<TaskListModel> taskLists;
 
-    @OneToMany(mappedBy = "taskList")
-    private List<TaskModel> tasks;
-
-    @Column(name="created_at", nullable = false, updatable = false)
     @CreatedDate
-    private LocalDateTime createdAt;
+    @Column(name = "created_at",nullable = false, updatable = false)
+    private String createdAt;
 
-    @Column(name = "updated_at")
     @LastModifiedDate
-    private LocalDateTime updatedAt;
+    @Column(name = "updated_at")
+    private String updatedAt;
 }
