@@ -32,6 +32,10 @@ public class TaskListModel {
     @Column(name = "last_position", nullable = false)
     private Integer lastPosition;
 
+    @ManyToOne
+    @JoinColumn(name = "board_id", referencedColumnName = "id", nullable = false)
+    private BoardModel board;
+
     @OneToMany(mappedBy = "taskList")
     private List<TaskModel> tasks;
 
