@@ -2,7 +2,6 @@ package junior.sergivaldo.mytasks.adapter.primary.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,7 +23,7 @@ public class BoardDTO {
 
     private String description;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private List<TaskListDTO> taskLists;
 
