@@ -6,7 +6,7 @@ import junior.sergivaldo.mytasks.application.domain.BoardEntity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BoardModelMapperDefaultImpl implements BoardModelMapper {
+public class BoardModelMapperBuilderImpl implements BoardModelMapper {
     @Override
     public BoardEntity toEntity(BoardModel board) {
         return BoardEntity.builder()

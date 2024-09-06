@@ -10,7 +10,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class TaskModelMapperDefaultImpl implements TaskModelMapper {
+public class TaskModelMapperBuilderImpl implements TaskModelMapper {
 
     @Override
     public TaskModel toModel(TaskEntity task) {

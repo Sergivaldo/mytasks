@@ -15,7 +15,7 @@ import java.util.Optional;
 
 @Component
 @RequiredArgsConstructor
-public class TaskListModelMapperDefaultImpl implements TaskListModelMapper {
+public class TaskListModelMapperBuilderImpl implements TaskListModelMapper {
 
     private final TaskModelMapper taskModelMapper;
 

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class TaskDTOMapperImpl implements TaskDTOMapper {
+public class TaskDTOMapperBuilderImpl implements TaskDTOMapper {
 
     @Override
     public TaskEntity mapToEntity(TaskDTO dto) {
