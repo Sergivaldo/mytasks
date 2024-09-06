@@ -26,10 +26,10 @@ public class BoardDTO {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private List<TaskListEntity> taskLists;
+    private List<TaskListDTO> taskLists;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
-    private String createAt;
+    private String createdAt;
 
     @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private String updatedAt;
