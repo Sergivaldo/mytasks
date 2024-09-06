@@ -11,7 +11,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class TaskListDTOMapperImpl implements TaskListDTOMapper {
+public class TaskListDTOMapperBuilderImpl implements TaskListDTOMapper {
 
     private final TaskDTOMapper taskDTOMapper;
 

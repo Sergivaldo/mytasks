@@ -6,14 +6,14 @@ import junior.sergivaldo.mytasks.application.domain.BoardEntity;
 import org.springframework.stereotype.Component;
 
 @Component
-public class BoardModelMapperDefaultImpl implements BoardModelMapper {
+public class BoardModelMapperBuilderImpl implements BoardModelMapper {
     @Override
     public BoardEntity toEntity(BoardModel board) {
         return BoardEntity.builder()
                 .id(board.getId())
                 .name(board.getName())
                 .description(board.getDescription())
-                .createAt(board.getCreatedAt())
+                .createdAt(board.getCreatedAt())
                 .updatedAt(board.getUpdatedAt())
                 .build();
     }
@@ -24,7 +24,7 @@ public class BoardModelMapperDefaultImpl implements BoardModelMapper {
                 .id(board.getId())
                 .name(board.getName())
                 .description(board.getDescription())
-                .createdAt(board.getCreateAt())
+                .createdAt(board.getCreatedAt())
                 .updatedAt(board.getUpdatedAt())
                 .build();
     }
