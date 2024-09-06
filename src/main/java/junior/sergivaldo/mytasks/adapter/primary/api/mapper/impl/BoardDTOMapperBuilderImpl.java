@@ -7,11 +7,14 @@ import junior.sergivaldo.mytasks.application.domain.BoardEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
+import java.util.Optional;
+
 @Component
 @RequiredArgsConstructor
 public class BoardDTOMapperBuilderImpl implements BoardDTOMapper {
 
-    private  final TaskListDTOMapper taskListDTOMapper;
+    private final TaskListDTOMapper taskListDTOMapper;
 
     @Override
     public BoardDTO toDTO(BoardEntity boardEntity) {
@@ -21,7 +24,11 @@ public class BoardDTOMapperBuilderImpl implements BoardDTOMapper {
                 .description(boardEntity.getDescription())
                 .createdAt(boardEntity.getCreatedAt())
                 .updatedAt(boardEntity.getUpdatedAt())
-                .taskLists(taskListDTOMapper.mapToDTO(boardEntity.getTaskLists()))
+                .taskLists(taskListDTOMapper.mapToDTO(
+                                Optional.ofNullable(boardEntity.getTaskLists())
+                                        .orElse(Collections.emptyList())
+                        )
+                )
                 .build();
     }
 
