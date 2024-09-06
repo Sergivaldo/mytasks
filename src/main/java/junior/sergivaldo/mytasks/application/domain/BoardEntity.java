@@ -13,6 +13,6 @@ public class BoardEntity {
     private String name;
     private String description;
     private List<TaskListEntity> taskLists;
-    private final String createAt;
+    private final String createdAt;
     private String updatedAt;
 }
