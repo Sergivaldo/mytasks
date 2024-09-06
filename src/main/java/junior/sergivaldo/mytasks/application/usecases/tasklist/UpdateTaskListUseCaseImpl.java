@@ -6,8 +6,8 @@ import junior.sergivaldo.mytasks.application.port.in.tasklist.UpdateTaskListUseC
 import junior.sergivaldo.mytasks.application.port.out.tasklist.UpdateTaskListAdapter;
 import lombok.RequiredArgsConstructor;
 
-import static junior.sergivaldo.mytasks.commons.utils.ThrowExceptionUtils.throwExceotionIfEmptyOrNull;
-import static junior.sergivaldo.mytasks.commons.utils.ThrowExceptionUtils.throwExceptionIfNull;
+import static junior.sergivaldo.mytasks.commons.ThrowExceptionUtils.throwExceotionIfEmptyOrNull;
+import static junior.sergivaldo.mytasks.commons.ThrowExceptionUtils.throwExceptionIfNull;
 
 @RequiredArgsConstructor
 public class UpdateTaskListUseCaseImpl implements UpdateTaskListUseCase {

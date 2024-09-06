@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-import static junior.sergivaldo.mytasks.commons.adapter.primary.api.Routes.TASK_LIST;
+import static junior.sergivaldo.mytasks.adapter.primary.api.utils.Routes.TASK_LIST;
 
 @RestController
 @RequestMapping(TASK_LIST)

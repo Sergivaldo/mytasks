@@ -1,8 +1,8 @@
 package junior.sergivaldo.mytasks.adapter.primary.api.controller.task;
 
-import junior.sergivaldo.mytasks.commons.adapter.primary.api.Routes;
 import junior.sergivaldo.mytasks.adapter.primary.api.dto.TaskDTO;
 import junior.sergivaldo.mytasks.adapter.primary.api.mapper.TaskDTOMapper;
+import junior.sergivaldo.mytasks.adapter.primary.api.utils.Routes;
 import junior.sergivaldo.mytasks.application.port.in.task.FindTasksByTitleUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

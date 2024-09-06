@@ -1,4 +1,4 @@
-package junior.sergivaldo.mytasks.commons.utils;
+package junior.sergivaldo.mytasks.commons;
 
 import java.util.Objects;
 

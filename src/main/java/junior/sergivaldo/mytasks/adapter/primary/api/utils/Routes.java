@@ -1,4 +1,4 @@
-package junior.sergivaldo.mytasks.commons.adapter.primary.api;
+package junior.sergivaldo.mytasks.adapter.primary.api.utils;
 
 public class Routes {
     private static final String ROOT = "/api/v1";
