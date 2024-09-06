@@ -3,8 +3,9 @@ package junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.impl;
 
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.TaskListModelMapper;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.TaskModelMapper;
-import junior.sergivaldo.mytasks.application.domain.TaskEntity;
+import junior.sergivaldo.mytasks.adapter.secondary.jpa.model.BoardModel;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.model.TaskListModel;
+import junior.sergivaldo.mytasks.application.domain.TaskEntity;
 import junior.sergivaldo.mytasks.application.domain.TaskListEntity;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
@@ -23,6 +24,7 @@ public class TaskListModelMapperBuilderImpl implements TaskListModelMapper {
     public TaskListModel mapToModel(TaskListEntity taskListEntity) {
         return TaskListModel.builder()
                 .id(taskListEntity.getId())
+                .board(BoardModel.builder().id(taskListEntity.getBoardId()).build())
                 .name(taskListEntity.getName())
                 .lastPosition(taskListEntity.getLastPosition())
                 .build();
@@ -43,6 +45,7 @@ public class TaskListModelMapperBuilderImpl implements TaskListModelMapper {
 
         return TaskListEntity.builder()
                 .id(taskList.getId())
+                .boardId(taskList.getBoard().getId())
                 .name(taskList.getName())
                 .tasks(tasks)
                 .lastPosition(taskList.getLastPosition())
