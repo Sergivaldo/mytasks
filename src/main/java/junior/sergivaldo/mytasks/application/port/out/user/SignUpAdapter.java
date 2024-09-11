@@ -2,8 +2,8 @@ package junior.sergivaldo.mytasks.application.port.out.user;
 
 import junior.sergivaldo.mytasks.application.domain.UserEntity;
 
-public interface CreateUserAdapter {
+public interface SignUpAdapter {
 
-    UserEntity create(UserEntity user);
+    UserEntity signUp(UserEntity user);
 
 }
