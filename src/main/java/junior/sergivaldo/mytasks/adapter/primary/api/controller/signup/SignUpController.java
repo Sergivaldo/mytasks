@@ -3,7 +3,7 @@ package junior.sergivaldo.mytasks.adapter.primary.api.controller.signup;
 import junior.sergivaldo.mytasks.adapter.primary.api.dto.UserDTO;
 import junior.sergivaldo.mytasks.adapter.primary.api.mapper.UserDTOMapper;
 import junior.sergivaldo.mytasks.adapter.primary.api.utils.Routes;
-import junior.sergivaldo.mytasks.application.port.in.user.SignUpUseCase;
+import junior.sergivaldo.mytasks.application.port.in.user.CreateUserUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 public class SignUpController {
 
-    private final SignUpUseCase signUpUseCase;
+    private final CreateUserUseCase createUserUseCase;
 
     private final UserDTOMapper userDTOMapper;
 
@@ -25,7 +25,7 @@ public class SignUpController {
     @ResponseStatus(HttpStatus.CREATED)
     public UserDTO signUp(@RequestBody UserDTO userDTO) {
         return userDTOMapper.toDTO(
-                signUpUseCase.execute(
+                createUserUseCase.execute(
                         userDTOMapper.toEntity(
                                 userDTO
                         )

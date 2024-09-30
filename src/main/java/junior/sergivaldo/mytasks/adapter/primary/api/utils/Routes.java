@@ -11,4 +11,6 @@ public class Routes {
     public static final String BOARD = ROOT + "/board";
 
     public static final String SIGN_UP = ROOT + "/sign-up";
+
+    public static final String SIGN_IN = ROOT + "/sign-in";
 }

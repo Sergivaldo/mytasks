@@ -24,6 +24,7 @@ public class UserModelMapperBuilderImpl implements UserModelMapper {
                 .id(userModel.getId())
                 .name(userModel.getName())
                 .email(userModel.getEmail())
+                .password(userModel.getPassword())
                 .build();
     }
 
