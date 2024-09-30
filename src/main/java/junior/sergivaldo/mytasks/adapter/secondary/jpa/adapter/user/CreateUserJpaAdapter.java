@@ -3,13 +3,13 @@ package junior.sergivaldo.mytasks.adapter.secondary.jpa.adapter.user;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.mapper.UserModelMapper;
 import junior.sergivaldo.mytasks.adapter.secondary.jpa.repository.UserRepository;
 import junior.sergivaldo.mytasks.application.domain.UserEntity;
-import junior.sergivaldo.mytasks.application.port.out.user.SignUpAdapter;
+import junior.sergivaldo.mytasks.application.port.out.user.CreateUserAdapter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class SignUpJpaAdapter implements SignUpAdapter {
+public class CreateUserJpaAdapter implements CreateUserAdapter {
 
     private final UserRepository userRepository;
 
