@@ -3,6 +3,7 @@ package junior.sergivaldo.mytasks.application.domain;
 import lombok.Builder;
 import lombok.Data;
 
+import java.util.List;
 import java.util.UUID;
 
 @Data
@@ -16,5 +17,7 @@ public class UserEntity {
     private String email;
 
     private String password;
+
+    private List<BoardEntity> boards;
 
 }
