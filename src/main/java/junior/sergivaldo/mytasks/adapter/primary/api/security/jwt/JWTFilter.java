@@ -25,6 +25,8 @@ public class JWTFilter extends OncePerRequestFilter {
 
     private final SignInDTOMapper signInDTOMapper;
 
+    private static final String TYPE_TOKEN = "Bearer";
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         String token = recoverToken(request);
@@ -43,12 +45,13 @@ public class JWTFilter extends OncePerRequestFilter {
     }
 
     private String recoverToken(HttpServletRequest request) {
+
         String authHeader = request.getHeader("Authorization");
-        if (authHeader == null || !authHeader.startsWith("Bearer ")) {
+        if (authHeader == null || !authHeader.startsWith(TYPE_TOKEN.concat(" "))) {
             return null;
         }
 
-        return authHeader.replace("Bearer ", "");
+        return authHeader.replace(TYPE_TOKEN.concat(" "), "");
     }
 
 }
